@@ -16,25 +16,25 @@ public class Solution {
 
         double tax = 1.0;
         double totalTax = 0.0;
-        String State = "WI";
 
-        int orderAmount = orderInput();
+        double orderAmount = orderInput();
 
-        System.out.print("What is the state?");
-        String stateInput = in.nextLine();
+        System.out.print("What is the state? ");
+        String State = in.next();
 
-        if(stateInput == State){
+
+        if (State.equals("WI")) {
 
             tax = tax * 0.055;
             totalTax = orderAmount * tax;
-            orderAmount += totalTax;
-            System.out.print("The tax is $"+totalTax+".");
+            orderAmount = orderAmount + totalTax;
+            System.out.println("The tax is $" + totalTax + ".");
 
         }
 
-        double  orderRound = orderAmount * 100.0;
+        double orderRound = orderAmount * 100.0;
         int roundCost = (int) Math.ceil(orderRound);
-        double  costFinal = orderAmount / 100.0;
+        double costFinal = roundCost / 100.0;
 
         DecimalFormat format = new DecimalFormat("0.00");
 
@@ -46,7 +46,7 @@ public class Solution {
 
     private static int orderInput() {
 
-        System.out.print("What is the order amount?");
+        System.out.print("What is the order amount? ");
         int orderInput = in.nextInt();
 
         return orderInput;
