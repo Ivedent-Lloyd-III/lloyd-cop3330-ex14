@@ -18,6 +18,7 @@ public class Solution {
         double totalTax = 0.0;
 
         double orderAmount = orderInput();
+        double subtotal = orderAmount;
 
         System.out.print("What is the state? ");
         String State = in.next();
@@ -28,7 +29,6 @@ public class Solution {
             tax = tax * 0.055;
             totalTax = orderAmount * tax;
             orderAmount = orderAmount + totalTax;
-            System.out.println("The tax is $" + totalTax + ".");
 
         }
 
@@ -37,6 +37,11 @@ public class Solution {
         double costFinal = roundCost / 100.0;
 
         DecimalFormat format = new DecimalFormat("0.00");
+
+        System.out.print("The subtotal is $"+String.format("%.2f",subtotal));
+        System.out.println(".");
+        System.out.println("The tax is $" + totalTax + ".");
+
 
         System.out.print("The total is $");
         System.out.print(format.format(costFinal));
