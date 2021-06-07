@@ -30,6 +30,9 @@ public class Solution {
             totalTax = orderAmount * tax;
             orderAmount = orderAmount + totalTax;
 
+            System.out.print("The subtotal is $"+String.format("%.2f",subtotal));
+            System.out.println(".");
+
         }
 
         double orderRound = orderAmount * 100.0;
@@ -38,8 +41,6 @@ public class Solution {
 
         DecimalFormat format = new DecimalFormat("0.00");
 
-        System.out.print("The subtotal is $"+String.format("%.2f",subtotal));
-        System.out.println(".");
         System.out.println("The tax is $" + totalTax + ".");
 
 
