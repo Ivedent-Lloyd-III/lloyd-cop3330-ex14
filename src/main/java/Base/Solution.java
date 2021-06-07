@@ -41,7 +41,7 @@ public class Solution {
 
         DecimalFormat format = new DecimalFormat("0.00");
 
-        System.out.print("The tax is $" + totalTax +  ". The total is $"+format.format(costFinal)+".");
+        System.out.print("The tax is $" + totalTax + "\n\rThe total is $"+format.format(costFinal)+".");
 
     }
 
